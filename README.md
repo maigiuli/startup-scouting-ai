@@ -12,18 +12,18 @@ The spreadsheet contains two main sheets:
 
 ### Accelerators
 Columns:
-- `website` 
-- `name`
-- `country`
-- `portfolio_url`
+- `Name` 
+- `Website`
+- `Location`
+- `Portfolio Page`
 
 ### Startups
 Columns:
-- `website` 
-- `name`
-- `country`
-- `accelerator` (reference via accelerator website)
-- `value_proposition`
+- `Name` 
+- `Website`
+- `Location`
+- `Accelerator` (reference via accelerator website)
+- `Value Proposition`
 
 When the sheet is opened, a menu called “Startup Scouting AI” appears in the top navigation bar. From this menu, the entire workflow can be executed without interacting with the code.
 - **scoutingAccelerators**: Adds new accelerators to the Accelerators sheet, using as a source this [link](https://rankings.ft.com/incubator-accelerator-programmes-europe) (Financial Times Europe's Leading Start-Up Hubs Ranking). The function is made so to add accelerators in batch of 10 items and never add the same item multiple times. The script saves name, website and location of each accelerator and adds an heading line if it is the first execution of the function. 

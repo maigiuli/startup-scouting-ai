@@ -1,3 +1,4 @@
+
 function onOpen() {
   const ui = SpreadsheetApp.getUi();
   ui.createMenu('Startup Scouting AI')
@@ -68,7 +69,7 @@ function scoutingAccelerators() {
     }
 
     if (sheet.getLastRow() === 0) {
-      sheet.appendRow(["Nome", "Sito Web", "Location"]);
+      sheet.appendRow(["Name", "Website", "Location"]);
       sheet.getRange("A1:C1").setFontWeight("bold").setBackground("#f3f3f3");
     }
 

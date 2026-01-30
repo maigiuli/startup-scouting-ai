@@ -6,7 +6,7 @@ This repository contains a prototype that automates the scouting of 10 Top accel
 
 ## Google Sheet
 
-🔗 [Link to google sheet](https://docs.google.com/spreadsheets/d/1_qYL7gVXxr6ltYNpBeAFCOSWWLntlFvwEFX2AzuPDaE/edit?gid=2060480799#gid=2060480799)
+[Link to google sheet](https://docs.google.com/spreadsheets/d/1_qYL7gVXxr6ltYNpBeAFCOSWWLntlFvwEFX2AzuPDaE/edit?gid=2060480799#gid=2060480799)
 
 The spreadsheet contains two main sheets:
 

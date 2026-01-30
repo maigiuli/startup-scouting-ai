@@ -10,22 +10,24 @@ This repository contains a prototype that automates the scouting of 10 Top accel
 
 The spreadsheet contains two main sheets:
 
-### Accelerators
-Columns:
-- `Name` 
-- `Website`
-- `Location`
-- `Portfolio Page`
+- Accelerators, with columns:
+  - `Name` 
+  - `Website`
+  - `Location`
+  - `Portfolio Page`
 
-### Startups
-Columns:
-- `Name` 
-- `Website`
-- `Location`
-- `Accelerator` 
-- `Value Proposition`
+- Startups, with columns:
+  - `Name` 
+  - `Website`
+  - `Location`
+  - `Accelerator` 
+  - `Value Proposition`
+
 
 When the sheet is opened, a menu called “Startup Scouting AI” appears in the top navigation bar. From this menu, the entire workflow can be executed without interacting with the code.
+
+## Startup scouting AI Menu 
+
 - **scoutingAccelerators**: Adds new accelerators to the Accelerators sheet, using as a source this [link](https://rankings.ft.com/incubator-accelerator-programmes-europe) (Financial Times Europe's Leading Start-Up Hubs Ranking). The function is made so to add accelerators in batch of 10 items and never add the same item multiple times. The script saves name, website and location of each accelerator and adds an heading line if it is the first execution of the function. 
 - **updateAllPortfolioUrls**: Find portfolio pages for each accelerator present in the Accelerators sheet and save the link in the fourth column of the same sheet. The function attempts to identify portfolio / alumni / companies pages using simple URL heuristics. An heading line is added if it is the first execution of the function. The function calls two other functions, **cleanToDomain**, that eventually cleans the link from potentially dangerous extra pages, and **findPortfolioUrl**, the one that actually does the job, using as keywords "portfolio", "startup", "start-up" and "companies" . 
 - **updateStartups**: Update startups related to each accelerator in the list and report them in the "startups" page (name, website, location, accelerator). The function calls an auxiliary function **askAIForStartups** that uses a LLM prompt in order to extract the startups from the portfolio page. The LLM uses a `gpt-4o-mini` model, a constraint on the response format, and a temperature = 0 to avoid hallucinations.

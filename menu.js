@@ -1,3 +1,4 @@
+
 function onOpen() {
   const ui = SpreadsheetApp.getUi();
   ui.createMenu('Startup Scouting AI')

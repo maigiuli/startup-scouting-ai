@@ -5,7 +5,9 @@ function enrichMissingData() {
   const data = sheet.getDataRange().getValues();
   
   let promptItems = [];
-  const MAX_PER_BATCH = 50; 
+  const MAX_PER_BATCH = 40; 
+  
+
 
 
   for (let i = 1; i < data.length; i++) {
@@ -76,6 +78,8 @@ function enrichMissingData() {
         }
       });
     }
+
+
   } catch (e) {
     writeLog("ERROR", "Critical failure: " + e.message);
     Logger.log("Critical Error during enrichment: " + e.message);

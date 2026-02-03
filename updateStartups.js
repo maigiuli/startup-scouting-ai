@@ -21,7 +21,7 @@ function updateStartups() {
     headerRange.setFontWeight("bold");
     headerRange.setBackground("#f3f3f3");
   }
-  const MAX_BATCH = 3;
+  const MAX_BATCH = 5;
   let processedCount = 0;
 
   for (let i = 1; i < data.length; i++) {

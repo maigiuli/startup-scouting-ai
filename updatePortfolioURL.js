@@ -25,27 +25,23 @@ function updateAllPortfolioUrls() {
     let foundPortfolio = "";
 
     if (existingPortfolio && existingPortfolio !== "") {
-      Logger.log("Line " + (i + 2) + ": Portfolio is already there skip");
       writeLog("INFO", "Line " + (i + 2) + ": Portfolio is already there skip");
       continue; 
     }
     if (originalUrl && originalUrl !== "") {
       try {
         let domainUrl = cleanToDomain(originalUrl);
-        
-        Logger.log("Analyzing (" + (i + 2) + "): " + domainUrl);
         writeLog("INFO", "Analyzing (" + (i + 2) + "): " + domainUrl);
-        
         foundPortfolio = findPortfolioUrl(domainUrl);
+        
         if(foundPortfolio){
-        Logger.log("Found page: " + foundPortfolio );
-        writeLog("INFO", "Found page: " + foundPortfolio); 
+          writeLog("INFO", "Found page: " + foundPortfolio); 
         }else{
           foundPortfolio = "Not found";
         }
+
         sheet.getRange(i + 2, 4).setValue(foundPortfolio);
       } catch (e) {
-        Logger.log("Error at line " + (i + 2) + ": " + e.toString());
         writeLog("ERROR", "Error at line " + (i + 2) + ": " + e.toString());
         foundPortfolio = "Error : " + e.message;
       }
